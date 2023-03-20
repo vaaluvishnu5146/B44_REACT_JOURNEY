@@ -1,5 +1,6 @@
 import React from "react";
 
+// CART CARD SHOWS THE ITEMS IN THE CART
 export default function CartCard(props) {
   const { data = {}, onRemove = (item) => {} } = props;
   return (
