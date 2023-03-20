@@ -1,5 +1,6 @@
 section.pricing {
   background: #007bff;
+  height: 100vh;
   background: linear-gradient(to right, #0062e6, #33aeff);
 }
 

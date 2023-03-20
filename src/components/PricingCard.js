@@ -3,7 +3,6 @@ import React from "react";
 // REACT COMPONENT
 export default function Card(props) {
   const { price } = props;
-  console.log(props);
   return (
     <div className="col-lg-4">
       <div className="card mb-5 mb-lg-0">
@@ -67,7 +66,7 @@ export default function Card(props) {
             </li>
           </ul>
           <div className="d-grid">
-            <a href="#" className="btn btn-primary text-uppercase">
+            <a href="/" className="btn btn-primary text-uppercase">
               Button
             </a>
           </div>

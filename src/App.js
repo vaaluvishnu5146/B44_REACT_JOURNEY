@@ -1,19 +1,17 @@
+import React, { useState } from "react";
 import "./App.css";
-import Card from "./components/card";
+import Counter from "./pages/counter";
+import Pricing from "./pages/pricing";
+import Cart from "./pages/Cart";
 
 function App() {
+  const [page, setPage] = useState("cart");
   return (
     <div className="App">
       <section className="pricing py-5">
-        <div className="container">
-          <div className="row">
-            <Card price="10" />
-            <Card price="20" />
-            <Card price="30" />
-            <Card price="0" />
-            <Card price="100" />
-          </div>
-        </div>
+        {page === "counter" && <Counter />}
+        {page === "pricing" && <Pricing />}
+        {page === "cart" && <Cart />}
       </section>
     </div>
   );
