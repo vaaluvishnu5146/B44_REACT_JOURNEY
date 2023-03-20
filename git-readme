@@ -1,0 +1,6 @@
+// 1. CREATE A REPOSITOR IN GITHUB
+// 2. git remote add origin https://github.com/${userName}/${projectName}.git
+// 3. git push --set-upstream origin master
+
+// FURTHER
+// git push
