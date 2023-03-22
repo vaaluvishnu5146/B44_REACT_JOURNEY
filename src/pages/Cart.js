@@ -75,6 +75,7 @@ function Cart() {
           <div className="col-lg-8">
             {data.map((element, index) => (
               <ProductCard
+                key={`product-card-${index}`}
                 disabled={checkCartStatus(element)}
                 data={element}
                 onChange={handleChange}
@@ -82,8 +83,12 @@ function Cart() {
             ))}
           </div>
           <div className="col-lg-4">
-            {cart.map((d, i) => (
-              <CartCard data={d} onRemove={handleCart} />
+            {cart.map((d, index) => (
+              <CartCard
+                key={`cart-card-${index}`}
+                data={d}
+                onRemove={handleCart}
+              />
             ))}
           </div>
         </div>

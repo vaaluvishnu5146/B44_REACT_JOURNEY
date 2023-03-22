@@ -1,0 +1,184 @@
+
+What is react?
+
+1. Javascript front end library (Collection of certain functionalities)
+2. Help us to build Re-usable user interfaces
+3. React is very well known for its vitual-dom
+4. Follows componentisation mechanism/approach
+
+BITS AND PIECES OR LEGO BLOCKS:
+
+function greet(message) {
+   console.log(message)
+}
+
+greet('Good morning') // Good morning
+greet('Good Evening') // Good Evening
+
+function sum(a, b) {
+    console.log(a + b)
+}
+
+sum(10, 11) // 21
+sum(100, 200) // 300
+
+
+Why react ?
+
+1. Helps us to build re-usable and scalable application faster
+2. Rendering is faster. (Rendering - HTML, CSS -> Tokens and rules ->  DOM TREE -> WEBSITE WILL BE VISIBLE)
+3. Learning curve is easy.
+4. Learn once and write anywhere library. ( Website, Webapp, Mobile apps, Desktop apps )
+
+Setup react project ?
+
+1. What is NPM?
+
+NPM is a Node Package Manager. It a package hosting service that has all the npm libraries listed for free.
+
+
+what is jsx and Understanding JSX:
+
+1. It abbrevated as JAVASCRIPT XML
+2. It follows HTML syntax, but not works same as HTML
+3. Attributes name changes
+
+
+what is components and understanding the components
+
+1. Component are nothing but a piece of re-usable USER-INTERFACE and business logic.
+
+Components (simple HTML layout to reusable react components):
+
+1. CLASS COMPONENT - 20%
+   1. managing code is hard
+   2. Lifecycle are hard to understanding
+   3. More Boiler plate code.
+
+   class ComponentName extends React.commponent {
+    constructor() {
+        super();
+    }
+
+    render() {
+        return (
+            <div></div>
+        );
+    }
+   }
+   
+   export default ComponentName;
+
+2. FUNCTIONAL COMPONENT
+   1. Code looks clean
+   2. easliy managable
+   3. Better Lifecycle methods
+   4. Lesser boiler plate code.
+
+
+   function ComponentName () {
+       return <div></div>;
+   }
+
+   export default ComponentName;
+
+
+
+Folder Structure:
+
+ROOT FOLDER - Where package.json lies
+
+Files inside ROOT FOLDER:
+
+FOLDER - node-modules
+
+All the necessary packages and supporting packages will be store inside the node-modules
+
+FOLDER - public
+
+FOLDER - src - source
+FILE - package.json 
+readme.md
+
+What is props and Passing data through props
+
+Working with array lists
+
+
+
+Usage of keys:
+
+React is very good at creating components dynamically. In-order to perform tree-shaking 
+for a component particularly react requires key prop to be passed along with component.
+
+State:
+
+It is same as variables which helps us to store a value and retrieve a value. Also helps us to chnage the value at any time.
+But React State advantage is the changes is real-time.
+
+Conditional rendering
+According to some condition we willl show hide Components, pages, styles
+
+
+Handling Events:
+
+
+React Components:
+
+1. Helps to split the code which can be Re-used
+2. Components UI, Business logic and lifecycle can be managed seperately.
+
+BABY BORN - INTROIDUCING A LIVING BEING TO THIS WORLD
+BABY -> ADULT -> YOUTH -> MEN/WOMEN -> OLD STARTS GROWING - LIVING ITS LIFE
+DEATH
+
+
+COMPONENT WILL BORN - MOUNTING
+  - 1. DOM TREE WILL BE CREATED
+  - 2. READY TO GET PAINTED IN THE UI
+
+COMPONENT INTROUCED INTO OUR WEBSITE (RENDER) - Rendering
+  - 1. CREATD DOM TREE WILL GET RENDERED INTO DOM
+
+COMPONENT WILL CHANGE ITS APPEARANCE - Re-Rendering - Updating
+  - 1. WHEN DATA CHANGES THE PARTICLAR COMPONENT WHICH IS SHARING THE DATA WILL GETS CHANGED. i.e. PARTCILAU BRANCH OF THE VIRTUAL DOM TREE GETS SHAKED
+  - 2. A COMPONENT WILL GET RE-RENDERED WHEN A STATE OF THE COMPONENT CHANGES OR PROPS CHANGES
+
+COMPONENT WILL DIE - UN-MOUNTING - Removed from virtual dom / Actual dom
+  - PARTICLUAR COMPONENT WHICH IS NO MORE NEEDED WILL BE REMOVED FROM VIRTUAL/ACTUAL DOM TREE.
+
+
+// REACT HOOKS - useState, useMemo, useCallback, useRef, createRef, useReducer, useContext, useLayoutEffect
+
+HOOKS ARE ADDED FUNCTIONALITIES FOR:
+1. INTRODUCING STATE MANAGEMENT IN FUNCTIONAL STATEMENTS
+2. OPTIMISING REACT APPLICATION
+3. HANDLING LIFECYCLE
+
+useEffect(() => {}, []);
+
+
+
+
+
+TYPES OF COMPONENTS:
+1. CLASS - It follows OOP approach
+
+2. FUNCTIONAL - It follows functional programming approach 
+
+useEffect(), useLayoutEffect()
+
+
+WASY TO USE COMPONENTS:
+
+1. CONTAINER AND PRESENTATIONAL ( STATEFULL AND STATELESS )
+
+
+
+
+
+
+
+
+
+

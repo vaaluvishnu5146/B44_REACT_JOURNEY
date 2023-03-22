@@ -1,53 +1,40 @@
 import React, { useEffect, useState } from "react";
-
-// function usestate() {
-//     return [0, function () {
-//         // do Something
-//     }];
-// }
+import CountForm from "../components/CountForm";
 
 function Counter(props) {
-  // STATE
   const [count, setCount] = useState(0);
-  const [loading, setLoading] = useState(false);
 
+  // LIFECYCLE THAT RUN AFTER COMPONENT GETS RENDERED
   useEffect(() => {
     console.log("RENDERING");
   }, []);
 
   useEffect(() => {
-    console.log("Count changed");
+    // alert(count);
   }, [count]);
 
-  (() => {
-    console.log("IIFE");
-  })();
-
-  function handleChange(type) {
-    if (type === "decrement" && count >= 1) setCount(count - 1);
-    else if (type === "increment") setCount(count + 1);
+  function handleChange(e, type) {
+    const id = e.target.id;
+    console.log(id);
+    if (id === "decrement" && count >= 1) setCount(count - 1);
+    else if (id === "increment") setCount(count + 1);
   }
   return (
     <div className="container">
+      <a
+        class="sidebar-brand d-flex align-items-center justify-content-center"
+        href="index.html"
+      >
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">
+          SB Admin <sup>2</sup>
+        </div>
+      </a>
       <div className="row">
         <div className="counter-container">
-          <button
-            className="counter-button"
-            onClick={() => handleChange("decrement")}
-          >
-            -
-          </button>
-          <div style={{ width: 20 }}></div>
-          <p id="counter-value" className="counter-text">
-            {count}
-          </p>
-          <div style={{ width: 20 }}></div>
-          <button
-            className="counter-button"
-            onClick={() => handleChange("increment")}
-          >
-            +
-          </button>
+          <CountForm count={count} handleChange={handleChange} />
         </div>
       </div>
     </div>
