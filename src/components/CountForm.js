@@ -10,10 +10,14 @@ element.addEventListener("click", (e) => {
 
 */
 
-function CountForm({ count = 0, handleChange = (e) => {} }) {
+function CountForm({ count = 0, handleChange = (e, type) => {} }) {
   return (
     <div>
-      <button id="decrement" className="counter-button" onClick={handleChange}>
+      <button
+        id="decrement"
+        className="counter-button"
+        onClick={(e) => handleChange(e, "children to parent")}
+      >
         -
       </button>
       <div style={{ width: 20 }}></div>
@@ -21,7 +25,11 @@ function CountForm({ count = 0, handleChange = (e) => {} }) {
         {count}
       </p>
       <div style={{ width: 20 }}></div>
-      <button id="increment" className="counter-button" onClick={handleChange}>
+      <button
+        id="increment"
+        className="counter-button"
+        onClick={(e) => handleChange(e, "children to parent")}
+      >
         +
       </button>
     </div>

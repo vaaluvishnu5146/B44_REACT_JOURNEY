@@ -69,31 +69,33 @@ function Cart() {
   }
 
   return (
-    <div className="container">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-8">
-            {data.map((element, index) => (
-              <ProductCard
-                key={`product-card-${index}`}
-                disabled={checkCartStatus(element)}
-                data={element}
-                onChange={handleChange}
-              />
-            ))}
-          </div>
-          <div className="col-lg-4">
-            {cart.map((d, index) => (
-              <CartCard
-                key={`cart-card-${index}`}
-                data={d}
-                onRemove={handleCart}
-              />
-            ))}
+    <section className="pricing py-5">
+      <div className="container">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-8">
+              {data.map((element, index) => (
+                <ProductCard
+                  key={`product-card-${index}`}
+                  disabled={checkCartStatus(element)}
+                  data={element}
+                  onChange={handleChange}
+                />
+              ))}
+            </div>
+            <div className="col-lg-4">
+              {cart.map((d, index) => (
+                <CartCard
+                  key={`cart-card-${index}`}
+                  data={d}
+                  onRemove={handleCart}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

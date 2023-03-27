@@ -151,22 +151,31 @@ COMPONENT WILL DIE - UN-MOUNTING - Removed from virtual dom / Actual dom
 // REACT HOOKS - useState, useMemo, useCallback, useRef, createRef, useReducer, useContext, useLayoutEffect
 
 HOOKS ARE ADDED FUNCTIONALITIES FOR:
-1. INTRODUCING STATE MANAGEMENT IN FUNCTIONAL STATEMENTS
+1. INTRODUCING STATE MANAGEMENT IN FUNCTIONAL COMPONENTS
 2. OPTIMISING REACT APPLICATION
 3. HANDLING LIFECYCLE
 
 useEffect(() => {}, []);
-
-
-
-
 
 TYPES OF COMPONENTS:
 1. CLASS - It follows OOP approach
 
 2. FUNCTIONAL - It follows functional programming approach 
 
-useEffect(), useLayoutEffect()
+DIVING DEEP IN useEffect(() => {}, []):
+
+1. USE EFFECT IS AN LIFECYCLE HOOK,
+2. IT RUNS AFTER THE COMPONENT RENDERS
+3. IT ACCEPTS TWO ARGUEMENTS ( CALLBACK = () => {}, DEPENDENCY ARRAY = [] )
+
+DEFINATION IN MY OWN WORDS:
+
+Piece of a functional code that runs whenever the componenent renders 
+and re-renders and also that has an dependency array
+that controlls when a component has to be re-rendered.
+
+useLayoutEffect():
+LATER
 
 
 WASY TO USE COMPONENTS:
@@ -174,9 +183,45 @@ WASY TO USE COMPONENTS:
 1. CONTAINER AND PRESENTATIONAL ( STATEFULL AND STATELESS )
 
 
+Lifecycle of Hook Or Components?
+
+1. MOUNTING - ALL THE JSX WILL BE CONVERTED TO VIRTUAL DOM TREE AND WAITING FOR PAINTING THE UI (or) MERGING WITH ACTUAL DOM
+2. RENDERING - VIRTUAL DOM TREE WILL BE MERGED WITH ACTUAL DOM TREE AND UI UPDATES
+3. RE-RENDERING - VALUE CHANGES WILL BE UPDATING VIRTUAL DOM TREE AND NEW UPDATES WILL BE MERGED WITH ACTUAL DOM 
+4. UN-MOUNTING - THE STATE OF THE COMPONENT IS NO MORE NEEDED, WE CAN REMOVE THE COMPONENT FROM DOM
+
+useState (VS) useEffect:
+
+USESTATE(HOOK):
+
+1. LIKE A VARIABLE IT CAN ABLE TO STORE VALUE AND RETRIEVE A VALUE
+2. IT RETURNS TWO PARAMS, i, e:
+
+1. VALUE -  RETRIEVES THE CUURENT STORED VALUE
+2. CALLBACK - HELPS TO UPDATE THE VALUE INSIDE THE HOOK
+
+const [count, setCount] = useState(0);
+
+function useState(initialValue = 0) {
+   const [data, setData] = useState(0)
+   
+   useEffect(() => {
+    setData(initialValue)
+   }, [initialValue]);
+
+   return [initialValue, setData = (value) => void];
+}
 
 
+USEEFFECT(HOOK):
+1. ITS A LIFECYCLE HOOK
+2. HWHENEVER A STATE OR PROPS CHANGES IN THE COMPONENT THIS HELP US TO RE-RENDER THE COMPONENT
 
+Props drilling:
+
+The process of sending data to deep nested children or Grand children is called props drilling
+
+Passing data from child to parent component:
 
 
 
