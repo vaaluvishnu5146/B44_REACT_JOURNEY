@@ -6,6 +6,7 @@ export default function Navbar() {
     <nav>
       <ul>
         <li>
+          <a href="https://www.google.com">Google</a>
           <a href="/">Home - Reloads</a>
           <Link to="/home">Home</Link>
         </li>

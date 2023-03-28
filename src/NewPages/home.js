@@ -1,7 +1,5 @@
 import React from "react";
-import { Routes, Route, Link, useLocation } from "react-router-dom";
-import Cart from "../pages/Cart";
-import Counter from "../pages/counter";
+import { Link, Outlet } from "react-router-dom";
 
 /**
  *  SIGNIN - /signin
@@ -12,29 +10,21 @@ import Counter from "../pages/counter";
  */
 
 export default function Home() {
-  let { state } = useLocation();
-  console.log(state);
   return (
     <div>
       <nav>
         <ul>
           <li>
-            <Link to="cart" relative="path">
-              Cart
-            </Link>
+            <Link to="/home/cart">Cart</Link>
           </li>
           <li>
-            <Link to="counter" relative="path">
-              Counter
-            </Link>
+            <Link to="/home/counter">Counter</Link>
           </li>
         </ul>
       </nav>
-      <Routes>
-        <Route path="/" element={() => <div>Landing</div>} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="counter" Component={<Counter />} />
-      </Routes>
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 }

@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Pricing from "./pages/pricing";
 import Cart from "./pages/Cart";
-import ContentPage from "./pages/Content";
 import Counter from "./pages/counter";
-// import Signin from "./pages/Signin";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // IMPORTING NEW PAGES
 import Signin from "./NewPages/Signin";
@@ -16,33 +13,17 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/signin" Component={Signin} />
-          <Route path="/signup" Component={Signup} />
-        </Routes>
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route path="signin" Component={Signin} />
+        <Route path="signup" Component={Signup} />
+        <Route path="home" Component={Home}>
+          <Route path="cart" Component={Cart} />
+          <Route path="counter" element={<Counter />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
 
 export default App;
-// {
-//   show ? (
-//     <section className="pricing py-5">
-//       {page === "counter" && <Counter />}
-//       {page === "pricing" && <Pricing />}
-//       {page === "cart" && <Cart />}
-//       {page === "content" && <ContentPage />}
-//       {page === "siginin" && <Signin />}
-//     </section>
-//   ) : (
-//     <section className="pricing py-5">Nothing to show</section>
-//   );
-// }
-
-// localhost: 3000 / signin - SIGNIN IN PAGE
-// localhost: 3000 / signup - SIGNUP IN PAGE
-// localhost: 3000 / home - HOME PAGE
